@@ -19,9 +19,11 @@ jobs:
         python: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
       - uses: astral-sh/setup-uv@v7
         with:
           version: "0.8.14"
-          python-version: ${{ matrix.python }}
       - name: Run pytest
         run: uv run --locked pytest -q greet.py
