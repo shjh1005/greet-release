@@ -7,6 +7,14 @@
 
 ## [Unreleased]
 
+### Added
+
+- `greet()`에 `punctuation` 인수를 더해 끝 문장부호를 고를 수 있다(기본값 `!`).
+
+### Fixed
+
+- `greet()`가 빈 이름이나 공백뿐인 이름에 `Hello, !`를 내던 것을 `Hello, world!`로 고쳤다.
+
 ## [0.1.0] - 2026-11-09
 
 ### Added
